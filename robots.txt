@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://pjhss0749-cmd.github.io/the-kerala-table/sitemap.xml
+Sitemap: https://bshrl.github.io/the-kerala-table/sitemap.xml
