@@ -1239,19 +1239,20 @@ body.dark-mode .theme-toggle {
    ===================================================== */
 
 .logo {
-    width: 205px;
-    height: 100px;
+    width: 168px;
+    height: 74px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex: 0 0 auto;
     overflow: hidden;
-    border-radius: 14px;
+    border-radius: 12px;
     background: var(--cream);
     padding: 0;
     box-sizing: border-box;
-    box-shadow: 0 7px 20px rgba(0,0,0,.18);
-    border: 1px solid rgba(242, 201, 76, .20);
+    box-shadow: 0 5px 16px rgba(0,0,0,.14);
+    border: 1px solid rgba(242, 201, 76, .16);
+    transition: transform .22s ease, box-shadow .22s ease;
 }
 
 .logo::before {
@@ -1263,6 +1264,11 @@ body.dark-mode .theme-toggle {
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100% auto;
+}
+
+.logo:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 7px 19px rgba(0,0,0,.18);
 }
 
 .logo-icon,
@@ -1280,8 +1286,8 @@ body.dark-mode .theme-toggle {
 
 @media (max-width: 700px) {
     .logo {
-        width: 170px;
-        height: 86px;
-        border-radius: 12px;
+        width: 142px;
+        height: 64px;
+        border-radius: 10px;
     }
 }
