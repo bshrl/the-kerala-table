@@ -228,6 +228,18 @@
         updateFavorite();
     });
 
-    // Home-page "Discover dish" links intentionally open the Food page
-    // without jumping or opening a dish automatically.
+    // Home-page "Discover dish" links jump to the matching card.
+    // They do NOT open the modal automatically.
+    const hashKey = window.location.hash.replace("#", "");
+    if (hashKey && dishes[hashKey]) {
+        const targetCard = document.getElementById(hashKey);
+        if (targetCard) {
+            setTimeout(() => {
+                targetCard.scrollIntoView({
+                    behavior: "smooth",
+                    block: "center"
+                });
+            }, 120);
+        }
+    }
 })();
