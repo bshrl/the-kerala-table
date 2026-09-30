@@ -1178,3 +1178,58 @@ body.dark-mode .theme-toggle {
 
     color: white;
 }
+
+
+/* =====================================================
+   BRAND TYPOGRAPHY - THE KERALA TABLE
+   Inspired by the supplied logo artwork.
+   ===================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,600;6..96,700&display=swap');
+
+.logo {
+    font-family: "Bodoni Moda", Georgia, "Times New Roman", serif;
+    font-weight: 700;
+    letter-spacing: -0.35px;
+}
+
+.logo-icon {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.home-hero h1,
+.food-hero h1,
+.about-hero h1,
+.help-hero h1 {
+    font-family: "Bodoni Moda", Georgia, "Times New Roman", serif;
+    font-weight: 600;
+    letter-spacing: -1.8px;
+}
+
+.home-hero h1 span,
+.food-hero h1 span,
+.about-hero h1 span,
+.help-hero h1 span {
+    font-weight: 700;
+    letter-spacing: -2.4px;
+}
+
+@media (max-width: 700px) {
+    .logo {
+        letter-spacing: -0.15px;
+    }
+
+    .home-hero h1,
+    .food-hero h1,
+    .about-hero h1,
+    .help-hero h1 {
+        letter-spacing: -1px;
+    }
+
+    .home-hero h1 span,
+    .food-hero h1 span,
+    .about-hero h1 span,
+    .help-hero h1 span {
+        letter-spacing: -1.4px;
+    }
+}
