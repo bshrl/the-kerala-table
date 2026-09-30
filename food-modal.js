@@ -228,18 +228,6 @@
         updateFavorite();
     });
 
-    // Home-page "Discover dish" links pass ?dish=dish-key.
-    // Scroll smoothly to the selected card without opening the modal.
-    const targetDish = new URLSearchParams(window.location.search).get("dish");
-    if (targetDish && dishes[targetDish]) {
-        const targetCard = document.getElementById(targetDish);
-        if (targetCard) {
-            setTimeout(() => {
-                targetCard.scrollIntoView({
-                    behavior: "smooth",
-                    block: "center"
-                });
-            }, 120);
-        }
-    }
+    // Home-page "Discover dish" links intentionally open the Food page
+    // without jumping or opening a dish automatically.
 })();
