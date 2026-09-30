@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore traditional Kerala dishes, flavours, snacks, curries and desserts at Taste Of Kerala.">
+    <title>Taste Of Kerala | Food</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip-link" href="#food-content">Skip to content</a>
+
+<header class="header">
+
+    <a href="index.html" class="logo">
+        <span class="logo-icon">🌴</span>
+        <span>Taste Of Kerala</span>
+    </a>
+
+    <nav class="navbar" id="mainNav">
+
+        <a href="index.html">HOME</a>
+        <a href="food.html" class="active">FOOD</a>
+        <a href="about.html">ABOUT US</a>
+        <a href="help.html">HELP</a>
+
+    </nav>
+
+    <button
+        class="theme-toggle"
+        id="themeToggle"
+        type="button"
+        aria-label="Switch to dark mode"
+        title="Dark mode"
+    >
+        🌙
+    </button>
+
+</header>
+
+<main id="food-content">
+    <section class="food-hero" aria-labelledby="food-hero-title">
+        <div class="food-hero-overlay"></div>
+        <div class="food-hero-content">
+            <p class="small-title">EXPLORE KERALA CUISINE</p>
+            <h1 id="food-hero-title">A Feast of <span>Kerala Flavours</span></h1>
+            <p>From comforting breakfasts to festive feasts, explore dishes that bring Kerala's food culture to life.</p>
+        </div>
+    </section>
+
+    <section class="food-intro" aria-labelledby="food-intro-title">
+        <p class="section-label">TASTE THE TRADITION</p>
+        <h2 id="food-intro-title">Discover Kerala's Favourite Dishes</h2>
+        <p>Browse the collection, search for a dish, or filter by category. Each card includes a quick description and a closer look option.</p>
+    </section>
+
+    <section class="food-section" aria-labelledby="collection-title">
+        <div class="food-heading">
+            <div><p class="section-label">OUR COLLECTION</p><h2 id="collection-title">Traditional Kerala Food</h2></div>
+            <span class="dish-count" id="dishCount">12 DISHES</span>
+        </div>
+
+        <div class="food-tools" aria-label="Food search and filters">
+            <label class="search-box" for="dishSearch"><span aria-hidden="true">⌕</span><input id="dishSearch" type="search" placeholder="Search dishes..." autocomplete="off"></label>
+            <div class="filter-row" id="filterRow" role="group" aria-label="Filter dishes by category">
+                <button type="button" class="filter-btn active" data-filter="all">All</button>
+                <button type="button" class="filter-btn" data-filter="breakfast">Breakfast</button>
+                <button type="button" class="filter-btn" data-filter="main">Main Course</button>
+                <button type="button" class="filter-btn" data-filter="seafood">Seafood</button>
+                <button type="button" class="filter-btn" data-filter="snack">Snacks</button>
+                <button type="button" class="filter-btn" data-filter="dessert">Desserts</button>
+            </div>
+        </div>
+        <p class="results-message" id="resultsMessage" aria-live="polite">Showing all 12 dishes</p>
+
+        <div class="food-grid" id="foodGrid">
+
+            <article class="food-card" data-category="main" data-name="kerala sadya" data-dish="sadya" id="sadya">
+                <div class="image-container"><img src="Kerala-Sadya.jpg" alt="Traditional Kerala Sadya served on a banana leaf" loading="lazy"><span class="food-tag">TRADITIONAL</span><span class="image-shine" aria-hidden="true"></span></div>
+                <div class="card-content"><h3>Kerala Sadya</h3><p>A grand vegetarian feast featuring rice, curries, vegetables, pickles and traditional side dishes.</p><button class="card-link dish-link" type="button">Explore dish <span aria-hidden="true">→</span></button></div>
+            </article>
+
+            <article class="food-card" data-category="breakfast" data-name="appam" data-dish="appam" id="appam">
+                <div class="image-container"><img src="Appam.jpg" alt="Traditional Kerala Appam" loading="lazy"><span class="food-tag">BREAKFAST</span><span class="image-shine" aria-hidden="true"></span></div>
+                <div class="card-content"><h3>Appam</h3><p>Soft and fluffy rice pancakes with beautifully crisp edges, often served with rich Kerala curries.</p><button class="card-link dish-link" type="button">Explore dish <span aria-hidden="true">→</span></button></div>
+            </article>
+
+            <article class="food-card" data-category="seafood" data-name="kerala fish curry fish curry" data-dish="fish-curry" id="fish-curry">
+                <div class="image-container"><img src="fish curry.jpeg" alt="Traditional Kerala Fish Curry" loading="lazy"><span class="food-tag">SEAFOOD</span><span class="image-shine" aria-hidden="true"></span></div>
+                <div class="card-content"><h3>Kerala Fish Curry</h3><p>A bold and spicy fish curry prepared with traditional Kerala spices and tangy flavours.</p><button class="card-link dish-link" type="button">Explore dish <span aria-hidden="true">→</span></button></div>
+            </article>
+
+            <article class="food-card" data-category="dessert" data-name="payasam" data-dish="payasam" id="payasam">
+                <div class="image-container"><img src="payasam.jpg" alt="Traditional Kerala Payasam dessert" loading="lazy"><span class="food-tag">DESSERT</span><span class="image-shine" aria-hidden="true"></span></div>
+                <div class="card-content"><h3>Payasam</h3><p>A traditional sweet dessert made with ingredients such as rice, milk, jaggery and coconut.</p><button class="card-link dish-link" type="button">Explore dish <span aria-hidden="true">→</span></button></div>
+            </article>
+
+            <article class="food-card" data-category="breakfast" data-name="puttu kadala curry puttu" data-dish="puttu" id="puttu">
+                <div class="image-container"><img src="Puttu.jpg" alt="Kerala Puttu with Kadala Curry" loading="lazy"><span class="food-tag">BREAKFAST</span><span class="image-shine" aria-hidden="true"></span></div>
+                <div class="card-content"><h3>Puttu &amp; Kadala Curry</h3><p>Steamed rice cakes served with a deliciously spiced black chickpea curry.</p><button class="card-link dish-link" type="button">Explore dish <span aria-hidden="true">→</span></button></div>
+            </article>
+
+            <article class="food-card" data-category="main" data-name="kerala biriyani biryani" data-dish="biriyani" id="biriyani">
+                <div class="image-container"><img src="biriyani.jpeg" alt="Kerala Biriyani" loading="lazy"><span class="food-tag">MAIN COURSE</span><span class="image-shine" aria-hidden="true"></span></div>
+                <div class="card-content"><h3>Kerala Biriyani</h3><p>Fragrant rice layered with aromatic spices and a richly flavoured meat preparation.</p><button class="card-link dish-link" type="button">Explore dish <span aria-hidden="true">→</span></button></div>
+            </article>
+
+            <article class="food-card" data-category="snack" data-name="banana chips" data-dish="banana-chips" id="banana-chips">
+                <div class="image-container"><img src="banana chips.jpg" alt="Kerala Banana Chips" loading="lazy"><span class="food-tag">SNACK</span><span class="image-shine" aria-hidden="true"></span></div>
+                <div class="card-content"><h3>Banana Chips</h3><p>Thin slices of Kerala banana fried until golden, crisp and delicious.</p><button class="card-link dish-link" type="button">Explore dish <span aria-hidden="true">→</span></button></div>
+            </article>
+
+            <article class="food-card" data-category="main" data-name="kerala chicken curry chicken curry" data-dish="chicken-curry" id="chicken-curry">
+                <div class="image-container"><img src="chicken curry.jpeg" alt="Kerala Chicken Curry" loading="lazy"><span class="food-tag">MAIN COURSE</span><span class="image-shine" aria-hidden="true"></span></div>
+                <div class="card-content"><h3>Kerala Chicken Curry</h3><p>Tender chicken cooked with coconut, spices and traditional Kerala flavours.</p><button class="card-link dish-link" type="button">Explore dish <span aria-hidden="true">→</span></button></div>
+            </article>
+
+            <article class="food-card" data-category="main" data-name="kerala beef fry beef fry" data-dish="beef-fry" id="beef-fry">
+                <div class="image-container"><img src="beef fry.jpeg" alt="Kerala Beef Fry" loading="lazy"><span class="food-tag">MAIN COURSE</span><span class="image-shine" aria-hidden="true"></span></div>
+                <div class="card-content"><h3>Kerala Beef Fry</h3><p>Tender beef cooked with aromatic spices, curry leaves and traditional seasonings.</p><button class="card-link dish-link" type="button">Explore dish <span aria-hidden="true">→</span></button></div>
+            </article>
+
+            <article class="food-card" data-category="main" data-name="kerala parotta parotta" data-dish="parotta" id="parotta">
+                <div class="image-container"><img src="parotta.jpeg" alt="Kerala Parotta" loading="lazy"><span class="food-tag">FAVOURITE</span><span class="image-shine" aria-hidden="true"></span></div>
+                <div class="card-content"><h3>Kerala Parotta</h3><p>Soft, layered and flaky flatbread enjoyed with rich curries and gravies.</p><button class="card-link dish-link" type="button">Explore dish <span aria-hidden="true">→</span></button></div>
+            </article>
+
+            <article class="food-card" data-category="breakfast" data-name="dosa" data-dish="dosa" id="dosa">
+                <div class="image-container"><img src="dosa.jpg" alt="Kerala Dosa" loading="lazy"><span class="food-tag">BREAKFAST</span><span class="image-shine" aria-hidden="true"></span></div>
+                <div class="card-content"><h3>Dosa</h3><p>A thin and crispy fermented rice pancake commonly enjoyed with curry or chutney.</p><button class="card-link dish-link" type="button">Explore dish <span aria-hidden="true">→</span></button></div>
+            </article>
+
+            <article class="food-card" data-category="main" data-name="pathiri" data-dish="pathiri" id="pathiri">
+                <div class="image-container"><img src="pathiri.jpeg" alt="Traditional Kerala Pathiri" loading="lazy"><span class="food-tag">TRADITIONAL</span><span class="image-shine" aria-hidden="true"></span></div>
+                <div class="card-content"><h3>Pathiri</h3><p>A soft rice flatbread that pairs beautifully with spicy Kerala meat and vegetable curries.</p><button class="card-link dish-link" type="button">Explore dish <span aria-hidden="true">→</span></button></div>
+            </article>
+        </div>
+
+        <div class="empty-state" id="emptyState" hidden>
+            <div class="empty-icon" aria-hidden="true">🍽️</div>
+            <h3>No dishes found</h3>
+            <p>Try another search or choose a different category.</p>
+            <button type="button" class="hero-button reset-search" id="resetSearch">Show all dishes</button>
+        </div>
+    </section>
+
+    <section class="food-cta" aria-labelledby="food-cta-title">
+        <p class="section-label">HUNGRY FOR MORE?</p>
+        <h2 id="food-cta-title">Every Dish Has a Story</h2>
+        <p>Kerala's cuisine is more than food. It is a celebration of tradition, family and culture.</p>
+        <a href="about.html" class="hero-button">Discover Kerala's Food Culture <span aria-hidden="true">→</span></a>
+    </section>
+</main>
+
+<footer>
+    <div class="footer-logo">🌴 Taste Of Kerala</div>
+    <p>Explore. Taste. Enjoy.</p>
+    <nav class="footer-links" aria-label="Footer navigation"><a href="index.html">Home</a><a href="food.html">Food</a><a href="about.html">About Us</a><a href="help.html">Help</a></nav>
+    <div class="footer-line"></div>
+    <p class="copyright">© 2026 Taste Of Kerala | All Rights Reserved</p>
+</footer>
+
+<div class="dish-modal" id="dishModal" hidden aria-hidden="true">
+    <div class="modal-shell">
+        <button class="modal-close" type="button" aria-label="Close dish details">×</button>
+        <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+            <img class="modal-image" id="modalImage" src="Kerala-Sadya.jpg" alt="">
+            <div class="modal-body">
+                <p class="section-label" id="modalTag">KERALA CUISINE</p>
+                <h2 id="modalTitle">Dish</h2>
+                <p id="modalDescription">Dish description.</p>
+                <div class="modal-note">✨ Discover the flavours, ingredients and traditions behind Kerala cuisine.</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<button class="back-top" id="backTop" type="button" aria-label="Back to top">↑</button>
+
+<!-- =====================================================
+     PREMIUM DISH DETAIL MODAL
+     ===================================================== -->
+
+<div
+    class="dish-modal"
+    id="dishModal"
+    hidden
+    aria-hidden="true"
+>
+
+    <div class="dish-modal-content">
+
+
+        <!-- IMAGE -->
+
+        <div class="dish-modal-image">
+
+            <img
+                id="modalImage"
+                src=""
+                alt=""
+            >
+
+        </div>
+
+
+        <!-- INFORMATION -->
+
+        <div class="dish-modal-info">
+
+            <button
+                class="modal-close"
+                type="button"
+                aria-label="Close dish details"
+            >
+                ×
+            </button>
+
+
+            <span
+                class="modal-tag"
+                id="modalTag"
+            >
+                TRADITIONAL
+            </span>
+
+
+            <h2 id="modalTitle">
+                Kerala Sadya
+            </h2>
+
+
+            <p id="modalDescription">
+                Discover the story behind this delicious
+                Kerala dish.
+            </p>
+
+
+            <!-- QUICK INFO -->
+
+            <div class="modal-info-grid">
+
+                <div class="modal-info-item">
+
+                    <span class="modal-info-icon">
+                        🍽️
+                    </span>
+
+                    <div>
+
+                        <small>
+                            TYPE
+                        </small>
+
+                        <strong id="modalTime">
+                            Traditional
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="modal-info-item">
+
+                    <span class="modal-info-icon">
+                        🌿
+                    </span>
+
+                    <div>
+
+                        <small>
+                            SERVED
+                        </small>
+
+                        <strong id="modalServe">
+                            With traditional sides
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- INGREDIENTS -->
+
+            <div class="modal-section">
+
+                <h3>
+                    Key Ingredients
+                </h3>
+
+                <div
+                    class="ingredients-list"
+                    id="modalIngredients"
+                ></div>
+
+            </div>
+
+
+            <!-- FAVOURITE -->
+
+            <button
+                class="favorite-dish"
+                id="favoriteDish"
+                type="button"
+                aria-pressed="false"
+            >
+                ♡ Add to Favourites
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+<script src="script.js"></script>
+<script src="theme.js"></script>
+
+
+
+</body>
+
+
+
+</html>
