@@ -1239,16 +1239,19 @@ body.dark-mode .theme-toggle {
    ===================================================== */
 
 .logo {
-    width: 185px;
-    height: 88px;
+    width: 205px;
+    height: 100px;
     display: flex;
     align-items: center;
+    justify-content: center;
     flex: 0 0 auto;
     overflow: hidden;
-    border-radius: 12px;
+    border-radius: 14px;
     background: var(--cream);
-    padding: 4px 7px;
+    padding: 0;
     box-sizing: border-box;
+    box-shadow: 0 7px 20px rgba(0,0,0,.18);
+    border: 1px solid rgba(242, 201, 76, .20);
 }
 
 .logo::before {
@@ -1259,7 +1262,7 @@ body.dark-mode .theme-toggle {
     background-image: url("logo-header.jpg");
     background-repeat: no-repeat;
     background-position: center;
-    background-size: contain;
+    background-size: 100% auto;
 }
 
 .logo-icon,
@@ -1277,7 +1280,8 @@ body.dark-mode .theme-toggle {
 
 @media (max-width: 700px) {
     .logo {
-        width: 155px;
-        height: 76px;
+        width: 170px;
+        height: 86px;
+        border-radius: 12px;
     }
 }
