@@ -228,18 +228,29 @@
         updateFavorite();
     });
 
-    // Home-page "Discover dish" links jump to the matching card.
-    // They do NOT open the modal automatically.
-    const hashKey = window.location.hash.replace("#", "");
-    if (hashKey && dishes[hashKey]) {
-        const targetCard = document.getElementById(hashKey);
+    // Home-page "Discover dish" uses ?dish=dish-key.
+    // Scroll to the matching card, but never open its modal.
+    const targetDish = new URLSearchParams(window.location.search).get("dish");
+
+    if (targetDish && dishes[targetDish]) {
+        const targetCard = document.getElementById(targetDish);
+
         if (targetCard) {
             setTimeout(() => {
                 targetCard.scrollIntoView({
                     behavior: "smooth",
                     block: "center"
                 });
+
+                // Remove the query after the jump so repeated Home -> Discover
+                // navigation always starts cleanly.
+                window.history.replaceState(
+                    {},
+                    document.title,
+                    window.location.pathname
+                );
             }, 120);
         }
     }
+
 })();
