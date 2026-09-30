@@ -228,12 +228,20 @@
         updateFavorite();
     });
 
-    // Home-page "Discover dish" uses ?dish=dish-key.
-    // Scroll to the matching card, but never open its modal.
-    const targetDish = new URLSearchParams(window.location.search).get("dish");
+    // When a user clicks Discover dish on Home, scroll to that exact card.
+    // The modal remains closed. sessionStorage makes repeated Home -> Discover
+    // navigation reliable even when the browser restores pages from its cache.
+    let selectedDish = null;
 
-    if (targetDish && dishes[targetDish]) {
-        const targetCard = document.getElementById(targetDish);
+    try {
+        selectedDish = sessionStorage.getItem("keralaSelectedDish");
+        sessionStorage.removeItem("keralaSelectedDish");
+    } catch (error) {
+        selectedDish = null;
+    }
+
+    if (selectedDish && dishes[selectedDish]) {
+        const targetCard = document.getElementById(selectedDish);
 
         if (targetCard) {
             setTimeout(() => {
@@ -241,14 +249,6 @@
                     behavior: "smooth",
                     block: "center"
                 });
-
-                // Remove the query after the jump so repeated Home -> Discover
-                // navigation always starts cleanly.
-                window.history.replaceState(
-                    {},
-                    document.title,
-                    window.location.pathname
-                );
             }, 120);
         }
     }
