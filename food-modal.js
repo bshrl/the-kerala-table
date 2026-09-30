@@ -228,9 +228,6 @@
         updateFavorite();
     });
 
-    const hashKey = window.location.hash.replace("#", "");
-    if (hashKey && dishes[hashKey]) {
-        const card = document.getElementById(hashKey);
-        setTimeout(() => openDish(hashKey, card?.querySelector(".dish-link")), 200);
-    }
+    // Home-page "Discover dish" links use #dish to jump to the card.
+    // The user should click "Explore dish" to open the modal.
 })();
